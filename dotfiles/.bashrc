@@ -56,6 +56,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.workrc ]; then
+    . ~/.workrc
+fi
 # set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
