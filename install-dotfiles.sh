@@ -12,4 +12,4 @@ for file in dotfiles/.*[a-z]; do
   ln -s "$(pwd)/$file" ~/$file_name
 done
 
-source ~/.bashrc
+source ~/.zshrc
