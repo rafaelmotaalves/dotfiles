@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rafaelmota/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,9 +70,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    colorize
     zsh-autosuggestions
-    command-not-found
+    colorize
     copyfile
     web-search
 )
@@ -108,3 +107,10 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.workrc ]; then
     . ~/.workrc
 fi
+
+if [ -f ~/.bashrc ]; then
+   . ~/.bashrc
+fi
+
+[[ $TERM != "screen" ]] && exec tmux
+
