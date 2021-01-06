@@ -8,7 +8,10 @@ mkdir $HOME/.config/nvim -p
 
 cp "init.vim" "$HOME/.config/nvim/"
 
-nvim :PlugInstall
+COC_PATH="$HOME/.config/coc/"
 
-nvim :CocInstall coc-tsserver
-nvim :CocInstall coc-python
+nvim +PlugInstall +qall
+
+cd $COC_PATH
+
+npm install coc-tsserver coc-python --save
